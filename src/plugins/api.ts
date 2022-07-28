@@ -12,6 +12,9 @@ export const ApiPlugin: Plugin = {
         baseURL: `${import.meta.env.VITE_APP_API_PROTOCOL}://${
           import.meta.env.VITE_APP_API_DOMAIN
         }`,
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
       })
     );
   },
