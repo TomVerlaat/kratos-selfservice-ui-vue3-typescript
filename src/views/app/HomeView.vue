@@ -1,4 +1,4 @@
-<template lang="pug">
+<!-- <template lang="pug">
 #home
 	p You signed in!
 	p(v-if='verified') Your account is verified!
@@ -8,6 +8,15 @@
 	JSONDisplay.session-display(
 		:json='{session}'
 	)
+</template> -->
+
+<template>
+<p>Welkom {{session.identity.traits.name.first}}</p>
+<p v-if="verified">Uw account is geverifieerd</p>
+<a v-bind:href="oryUrls.logoutUrl"> Uitloggen </a> <br>
+<a href="/settings"> Profiel instellingen </a>
+<br><br>
+<p>{{session.identity}}</p>
 </template>
 
 <script setup lang="ts">
