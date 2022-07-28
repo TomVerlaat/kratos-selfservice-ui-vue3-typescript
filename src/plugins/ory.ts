@@ -9,7 +9,6 @@ export const Ory = new V0alpha2Api(
     basePath: "http://127.0.0.1:4433",
     baseOptions: {
       withCredentials: true,
-      cors: true,
     },
   })
 );
