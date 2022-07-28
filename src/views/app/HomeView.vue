@@ -15,7 +15,7 @@ import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
 import { injectStrict } from '../../utils';
 import { $session, $ory_urls } from '../../plugins/ory';
-import JSONDisplay from '../../components/JSONDisplay.vue';
+//import JSONDisplay from '../../components/JSONDisplay.vue';
 
 const session = injectStrict($session);
 const oryUrls = injectStrict($ory_urls);
