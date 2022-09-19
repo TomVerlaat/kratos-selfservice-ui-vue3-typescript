@@ -1,6 +1,8 @@
 <template lang="pug">
+// Creates a div with the login id
 #login
   h1.poppins.fs_3.fw_6 Login
+  // Calls the OryFlow.vue component and passes the data from the SelfServiceLoginFlow.
   OryFlow(
     v-if='loginFlow'
     form-id='login-form'
@@ -29,6 +31,9 @@ const router = useRouter();
 const loginFlow = ref<SelfServiceLoginFlow | undefined>();
 const handleGetFlowError = makeHandleGetFlowError(router);
 
+// Code will be automatically ran.
+console.log("Hello from script!");
+
 // check if we have a flow param
 const { flow, refresh, aal, returnTo } = route.query;
 
@@ -49,6 +54,7 @@ const initializeSelfServiceLoginFlowForBrowsers = () =>
     })
     .catch(handleGetFlowError);
 
+// This statement will be executed automatically
 if (typeof flow !== 'string') {
   // if there's no flow in our route,
   // we need to initialize our login flow
